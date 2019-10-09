@@ -5,9 +5,7 @@
 ### 开启所有功能
 ```bash
   docker run -d --name ariang \
-  -p 6080:6080 \
-  -p 6800:6800 \
-  -e ENABLE_AUTH=true \
+  -p 6080:80 \
   -e RPC_SECRET=Hello \
   -e ARIA2_USER=user \
   -e ARIA2_PWD=pwd \
@@ -18,7 +16,6 @@
 
 ### Docker 环境变量
 
-  * ENABLE_AUTH 启用 Basic auth(网页简单认证) 用户认证
   * ARIA2_USER Basic Auth 用户认证用户名
   * ARIA2_PWD Basic Auth 密码
   * RPC_SECRET Aria2 RPC 加密 token
