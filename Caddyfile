@@ -14,7 +14,7 @@
 }
 
 0.0.0.0:80/ui/ {
-  root /app/aria2-ng
+  root /app/ariang
   timeouts none
   gzip
   log stdout
