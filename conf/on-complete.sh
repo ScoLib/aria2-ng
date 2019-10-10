@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+
 echo [$(date)] "Download success."
 echo "Group Id: $1"
 echo "File Num: $2"
