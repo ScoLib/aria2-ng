@@ -12,7 +12,7 @@ RUN apk update \
 	&& apk add --no-cache --update aria2 bash curl \
     && curl https://getcaddy.com | bash -s personal \
 	&& mkdir -p ariang \
-    && version=1.1.3 \
+    && version=1.1.4 \
     && wget --no-check-certificate https://github.com/mayswind/AriaNg/releases/download/${version}/AriaNg-${version}.zip \
     && unzip AriaNg-${version}.zip -d ariang \
     && rm -rf AriaNg-${version}.zip \
