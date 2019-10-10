@@ -9,6 +9,8 @@
   -e RPC_SECRET=Hello \
   -e ARIA2_USER=user \
   -e ARIA2_PWD=pwd \
+  -e PUID=1000 \
+  -e PGID=1000 \
   -v /yourdata:/data \
   -v /yourconf/:/app/conf \
   scolib/aria2-ng
@@ -19,7 +21,8 @@
   * ARIA2_USER Basic Auth 用户认证用户名
   * ARIA2_PWD Basic Auth 密码
   * RPC_SECRET Aria2 RPC 加密 token
-
+  * PUID 需要绑定主机的Linux用户ID，可以通过`cat /etc/passwd` 查看用户列表， 默认UID 是`1000`
+  * PGID 需要绑定的主机的Linux 用户组ID，默认GID 是`1000`
 
 ### Docker volume
   * `/data` 用来放置所有下载的文件的目录
@@ -35,6 +38,11 @@ docker build -t aria2-ng .
 
 ## 访问
 Aria-Ng： http://serverip:6080/
+
+## 感谢
+
+[wahyd4/aria2-ui](https://github.com/wahyd4/aria2-ariang-docker)
+
 
 
 ## 常见问题

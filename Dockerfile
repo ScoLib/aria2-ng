@@ -7,8 +7,12 @@ WORKDIR /app
 ENV RPC_SECRET=""
 ENV ARIA2_USER=user
 ENV ARIA2_PWD=password
+ENV PUID=1000
+ENV PGID=1000
 
-RUN apk update \
+RUN addgroup -g ${PGID} aria2 \
+    && adduser -D -u ${PUID} aria2 aria2 \
+    && apk update \
 	&& apk add --no-cache --update aria2 bash curl \
     && curl https://getcaddy.com | bash -s personal \
 	&& mkdir -p ariang \

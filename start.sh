@@ -1,4 +1,9 @@
-#!/bin/sh
+#!/bin/bash -eu
+
+chown -R aria2:aria2 \
+         /app \
+         /usr/local \
+         /var/log
 
 if [ -f /app/conf/on-complete.sh ]; then
 	chmod +x /app/conf/on-complete.sh
