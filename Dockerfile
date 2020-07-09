@@ -23,9 +23,9 @@ ADD start.sh /app/
 ADD conf /app/conf
 ADD Caddyfile /usr/local/caddy/
 
-RUN chmod +x /app/start.sh
+RUN chmod +x /app
 
 VOLUME ["/app/conf", "/data"]
 EXPOSE 80
 
-ENTRYPOINT ["sh", "/app/start.sh"]
+CMD ["sh", "/app/start.sh"]
