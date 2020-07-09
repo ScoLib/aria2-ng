@@ -28,4 +28,4 @@ RUN chmod +x /app/start.sh
 VOLUME ["/app/conf", "/data"]
 EXPOSE 80
 
-CMD ["/app/start.sh"]
+ENTRYPOINT ["sh", "/app/start.sh"]
